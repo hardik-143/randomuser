@@ -7,6 +7,7 @@ const SingleUser = () => {
     const {users,getAddress} = useGlobalContext()
     // eslint-disable-next-line
     const [singleData,setSingleData] = useState(users[id])
+
     return (
         <>
         <Link to="/">
@@ -30,6 +31,7 @@ const SingleUser = () => {
                 <p>Phone : <span className='info'>{singleData.cell}</span></p>
                 <p>Address : <span className='info'><address>{getAddress(singleData.location)}</address></span></p>
                 <p>TimeZone : <span className='info'>{singleData.location.timezone.description}</span></p>
+                <p>DOB: <span className='info'>{singleData.dob.date}</span></p>
             </div>
         </Card>
 
